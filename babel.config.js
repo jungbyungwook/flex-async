@@ -1,0 +1,40 @@
+module.exports = {
+  presets: ['module:metro-react-native-babel-preset'],
+  plugins: [
+    'babel-plugin-styled-components',
+    [
+      'module-resolver',
+      {
+        root: ['.'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        alias: {
+          '@': './src',
+          '@app': './src/app',
+          '@components': './src/components',
+          '@UIKit': './src/components/UIKit',
+          '@data': './src/data',
+          '@enums': './src/data/enums',
+          '@models': './src/data/models',
+          '@viewModels': './src/data/viewModels',
+          '@constants': './src/data/constants',
+          '@repositories': './src/data/repositories',
+          '@interfaces': './src/data/interfaces',
+          '@helpers': './src/helpers',
+          '@presentation': './src/presentation',
+          '@Screens': './src/presentation/Screens',
+          '@Views': './src/presentation/Views',
+          '@domain': './src/domain',
+          '@hooks': './src/domain/hooks',
+          '@useCases': './src/domain/useCases',
+          '@coordinator': './src/domain/coordinator',
+          '@configurations': './src/domain/configurations',
+          '@factories': './src/domain/factories',
+          '@managers': './src/domain/managers',
+          '@redux': './src/domain/redux',
+          '@slices': './src/domain/redux/slices',
+        },
+      },
+    ],
+    'react-native-reanimated/plugin', // CAUTION Reanimated plugin has to be listed last.
+  ],
+};
